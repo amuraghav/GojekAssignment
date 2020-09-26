@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04EFE790251F332300926AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE78F251F332300926AAD /* AppDelegate.swift */; };
-		04EFE792251F332300926AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE791251F332300926AAD /* SceneDelegate.swift */; };
 		04EFE794251F332400926AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE793251F332300926AAD /* ViewController.swift */; };
 		04EFE797251F332400926AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EFE795251F332400926AAD /* Main.storyboard */; };
 		04EFE79A251F332400926AAD /* GojekAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE798251F332400926AAD /* GojekAssignment.xcdatamodeld */; };
@@ -16,6 +15,20 @@
 		04EFE79F251F332900926AAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EFE79D251F332900926AAD /* LaunchScreen.storyboard */; };
 		04EFE7AA251F332A00926AAD /* GojekAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE7A9251F332A00926AAD /* GojekAssignmentTests.swift */; };
 		04EFE7B5251F332A00926AAD /* GojekAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE7B4251F332A00926AAD /* GojekAssignmentUITests.swift */; };
+		04EFE7C9251F346B00926AAD /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE7C8251F346B00926AAD /* ServiceManager.swift */; };
+		04EFE7CE251F359000926AAD /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE7CD251F359000926AAD /* Bindable.swift */; };
+		04EFE7DA251F373600926AAD /* RepositoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE7D8251F373600926AAD /* RepositoryVC.swift */; };
+		04EFE7DB251F373600926AAD /* RepositoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EFE7D9251F373600926AAD /* RepositoryVC.xib */; };
+		04EFE7F8251F401000926AAD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE7F7251F401000926AAD /* Extension.swift */; };
+		04EFE7FD251F472800926AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE7FC251F472800926AAD /* SceneDelegate.swift */; };
+		04EFE802251F49E100926AAD /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE801251F49E100926AAD /* RepositoryViewModel.swift */; };
+		04EFE807251F4BDF00926AAD /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE806251F4BDF00926AAD /* RepositoryModel.swift */; };
+		04EFE80D251F4F0500926AAD /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE80C251F4F0500926AAD /* BaseViewModel.swift */; };
+		04EFE814251F53B800926AAD /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE812251F53B800926AAD /* RepoTableViewCell.swift */; };
+		04EFE815251F53B800926AAD /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EFE813251F53B800926AAD /* RepoTableViewCell.xib */; };
+		04EFE81A251F60AF00926AAD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE819251F60AF00926AAD /* BaseTableViewCell.swift */; };
+		04EFE822251F63FA00926AAD /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE821251F63FA00926AAD /* BaseTableView.swift */; };
+		04EFE828251F681200926AAD /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE827251F681200926AAD /* RootController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +51,6 @@
 /* Begin PBXFileReference section */
 		04EFE78C251F332300926AAD /* GojekAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GojekAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EFE78F251F332300926AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04EFE791251F332300926AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04EFE793251F332300926AAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04EFE796251F332400926AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04EFE799251F332400926AAD /* GojekAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GojekAssignment.xcdatamodel; sourceTree = "<group>"; };
@@ -51,6 +63,20 @@
 		04EFE7B0251F332A00926AAD /* GojekAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GojekAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EFE7B4251F332A00926AAD /* GojekAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GojekAssignmentUITests.swift; sourceTree = "<group>"; };
 		04EFE7B6251F332A00926AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04EFE7C8251F346B00926AAD /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		04EFE7CD251F359000926AAD /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		04EFE7D8251F373600926AAD /* RepositoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryVC.swift; sourceTree = "<group>"; };
+		04EFE7D9251F373600926AAD /* RepositoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryVC.xib; sourceTree = "<group>"; };
+		04EFE7F7251F401000926AAD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		04EFE7FC251F472800926AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04EFE801251F49E100926AAD /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		04EFE806251F4BDF00926AAD /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		04EFE80C251F4F0500926AAD /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		04EFE812251F53B800926AAD /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		04EFE813251F53B800926AAD /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		04EFE819251F60AF00926AAD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		04EFE821251F63FA00926AAD /* BaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		04EFE827251F681200926AAD /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +127,10 @@
 		04EFE78E251F332300926AAD /* GojekAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				04EFE7D2251F35C300926AAD /* Module */,
+				04EFE7C6251F341800926AAD /* Common */,
 				04EFE78F251F332300926AAD /* AppDelegate.swift */,
-				04EFE791251F332300926AAD /* SceneDelegate.swift */,
+				04EFE7FC251F472800926AAD /* SceneDelegate.swift */,
 				04EFE793251F332300926AAD /* ViewController.swift */,
 				04EFE795251F332400926AAD /* Main.storyboard */,
 				04EFE79B251F332900926AAD /* Assets.xcassets */,
@@ -129,6 +157,105 @@
 				04EFE7B6251F332A00926AAD /* Info.plist */,
 			);
 			path = GojekAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		04EFE7C6251F341800926AAD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE80B251F4ECC00926AAD /* BaseClasses */,
+				04EFE7C7251F343800926AAD /* ServiceManager */,
+				04EFE7CD251F359000926AAD /* Bindable.swift */,
+				04EFE7F7251F401000926AAD /* Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		04EFE7C7251F343800926AAD /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE7C8251F346B00926AAD /* ServiceManager.swift */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		04EFE7D2251F35C300926AAD /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE82C251F6F2F00926AAD /* NoInternet */,
+				04EFE7D3251F35ED00926AAD /* RepositoryList */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		04EFE7D3251F35ED00926AAD /* RepositoryList */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE7D7251F36B000926AAD /* Controller */,
+				04EFE7D6251F367900926AAD /* View */,
+				04EFE7D5251F363B00926AAD /* ViewModel */,
+				04EFE7D4251F362A00926AAD /* Model */,
+			);
+			path = RepositoryList;
+			sourceTree = "<group>";
+		};
+		04EFE7D4251F362A00926AAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE806251F4BDF00926AAD /* RepositoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04EFE7D5251F363B00926AAD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE801251F49E100926AAD /* RepositoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04EFE7D6251F367900926AAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE811251F536A00926AAD /* CustomeTableViewCells */,
+				04EFE7D9251F373600926AAD /* RepositoryVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04EFE7D7251F36B000926AAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE7D8251F373600926AAD /* RepositoryVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04EFE80B251F4ECC00926AAD /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE821251F63FA00926AAD /* BaseTableView.swift */,
+				04EFE80C251F4F0500926AAD /* BaseViewModel.swift */,
+				04EFE819251F60AF00926AAD /* BaseTableViewCell.swift */,
+				04EFE827251F681200926AAD /* RootController.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		04EFE811251F536A00926AAD /* CustomeTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				04EFE812251F53B800926AAD /* RepoTableViewCell.swift */,
+				04EFE813251F53B800926AAD /* RepoTableViewCell.xib */,
+			);
+			path = CustomeTableViewCells;
+			sourceTree = "<group>";
+		};
+		04EFE82C251F6F2F00926AAD /* NoInternet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NoInternet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +363,9 @@
 			files = (
 				04EFE79F251F332900926AAD /* LaunchScreen.storyboard in Resources */,
 				04EFE79C251F332900926AAD /* Assets.xcassets in Resources */,
+				04EFE7DB251F373600926AAD /* RepositoryVC.xib in Resources */,
 				04EFE797251F332400926AAD /* Main.storyboard in Resources */,
+				04EFE815251F53B800926AAD /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +391,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EFE794251F332400926AAD /* ViewController.swift in Sources */,
+				04EFE80D251F4F0500926AAD /* BaseViewModel.swift in Sources */,
+				04EFE807251F4BDF00926AAD /* RepositoryModel.swift in Sources */,
 				04EFE79A251F332400926AAD /* GojekAssignment.xcdatamodeld in Sources */,
+				04EFE7F8251F401000926AAD /* Extension.swift in Sources */,
+				04EFE828251F681200926AAD /* RootController.swift in Sources */,
+				04EFE7CE251F359000926AAD /* Bindable.swift in Sources */,
 				04EFE790251F332300926AAD /* AppDelegate.swift in Sources */,
-				04EFE792251F332300926AAD /* SceneDelegate.swift in Sources */,
+				04EFE802251F49E100926AAD /* RepositoryViewModel.swift in Sources */,
+				04EFE822251F63FA00926AAD /* BaseTableView.swift in Sources */,
+				04EFE7DA251F373600926AAD /* RepositoryVC.swift in Sources */,
+				04EFE7C9251F346B00926AAD /* ServiceManager.swift in Sources */,
+				04EFE7FD251F472800926AAD /* SceneDelegate.swift in Sources */,
+				04EFE81A251F60AF00926AAD /* BaseTableViewCell.swift in Sources */,
+				04EFE814251F53B800926AAD /* RepoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +583,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 473A78ZXTY;
 				INFOPLIST_FILE = GojekAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +591,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Gojek.GojekAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,6 +603,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 473A78ZXTY;
 				INFOPLIST_FILE = GojekAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +611,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Gojek.GojekAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
