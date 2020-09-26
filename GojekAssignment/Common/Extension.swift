@@ -93,4 +93,12 @@ extension UIView{
             rightAnchor.constraint(equalTo: right, constant: -rightConstant).isActive = true
         }
     }
+    
+    func roundCornersRadius(cornerRadius: CGFloat , borderColor : UIColor? = .clear , borderWidth : CGFloat? = 1.0) {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderColor = borderColor?.cgColor
+        self.layer.borderWidth = borderWidth!
+            self.clipsToBounds = true
+            
+        }
 }

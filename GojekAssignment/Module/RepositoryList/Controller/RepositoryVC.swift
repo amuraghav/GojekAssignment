@@ -9,7 +9,7 @@ import UIKit
 
 class RepositoryVC: UIViewController {
     @IBOutlet var tableView: BaseTableView!
-    
+    private let refreshControl = UIRefreshControl()
     lazy var viewModel: RepositoryViewModel = {
         RepositoryViewModel()
     }()
@@ -17,10 +17,19 @@ class RepositoryVC: UIViewController {
         super.viewDidLoad()
         self.title = "Github Trends"
         tableView.registerCells(RepoTableViewCell.self)
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshGitRepositry(_:)), for: .valueChanged)
         addListener()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.getRepository()
     }
-  
+    
+    @objc private func refreshGitRepositry(_ sender: Any) {
+        viewModel.getRepository()
+    }
+
     
     func addListener() {
         
@@ -30,26 +39,40 @@ class RepositoryVC: UIViewController {
         viewModel.showAlert.bind { [unowned self](message) in
             self.showAlertMesssage(message: message, onCompletion: nil)
         }
-      
-        viewModel.RepositoryList.bind { [unowned self](list) in
+        viewModel.neworkError.bind {[unowned self](isNetworkError) in
             DispatchQueue.main.async {
+            self.refreshControl.endRefreshing()
+             showNetworkError()
+            }
+        }
+      
+        viewModel.repositoryList.bind { [unowned self](list) in
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
             }
          
         }
         
     }
+    
+    func showNetworkError() {
+        let networkVC = NoInternetVC.instance()
+        let navigationRepositoryVC = UINavigationController(rootViewController: networkVC)
+        navigationRepositoryVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(navigationRepositoryVC, animated: true, completion: nil)
+    }
 
 }
 
 extension RepositoryVC : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.RepositoryList.value?.count ?? 0
+        viewModel.repositoryList.value?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell") as? RepoTableViewCell else{ return UITableViewCell()}
-        cell.data = viewModel.RepositoryList.value?[indexPath.row]
+        cell.data = viewModel.repositoryList.value?[indexPath.row]
         return cell
     }
     

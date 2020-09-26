@@ -17,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let screen = (scene as? UIWindowScene) else { return }
         window = RootControllers.shared.setupWindow(screen)
+        appDelegate.window = window
         let navigationRepositoryVC = UINavigationController(rootViewController: RepositoryVC.instance())
         window?.rootViewController = navigationRepositoryVC
         

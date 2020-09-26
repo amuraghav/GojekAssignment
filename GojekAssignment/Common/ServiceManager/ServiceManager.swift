@@ -12,13 +12,11 @@ import Foundation
 let baseUrl = "https://ghapi.huchen.dev/"
 
 // MARK:- NETWORK ERROR
-enum NetworkError:Error {
+enum NetworkError:CLongLong,Error {
     
     case unableToParse
-    case noData
     case unknown
-    case requestTimedOut
-    case noInternet
+    case noInternet = -1009
 }
 
 // MARK:- API REQUEST MODEL
@@ -44,8 +42,9 @@ class ServiceManager: NSObject{
             defer { self.dataTask = nil }
             
             if let error = error {
-                print("Error : \(error)")
-                completion(.failure(.unknown))
+//                print("Error : \(error)")
+                ((error as NSError).code == NetworkError.noInternet.rawValue) ? completion(.failure(.noInternet)) : completion(.failure(.unknown))
+               
             } else if let data = data,
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
