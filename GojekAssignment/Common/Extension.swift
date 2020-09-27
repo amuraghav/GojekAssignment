@@ -102,3 +102,41 @@ extension UIView{
             
         }
 }
+
+// MARK:- Download Image 
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
+}
+
+extension UIStackView {
+    ///Adds a background view to the stackview with the desired color and applies some corner radius
+    func addBackground(_ color: UIColor, cornerRadius: CGFloat = 5.0) {
+        let backgroundView = UIView(frame: bounds)
+//        backgroundView.backgroundColor = color
+        backgroundView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        backgroundView.layer.cornerRadius = cornerRadius
+        backgroundView.layer.borderColor = color.cgColor
+        backgroundView.layer.borderWidth = 1.0
+        self.clipsToBounds = true
+        insertSubview(backgroundView, at: 0)
+        
+    }
+}

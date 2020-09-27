@@ -24,7 +24,7 @@ class RepoTableViewCell: BaseTableViewCell {
     
     func setup(){
         guard let value = data as? Repository else { return }
-        descriptionLabel.text = value.description
+        descriptionLabel.text = value.welcomeDescription
         starLabel.text = "\(value.stars ?? 0)"
         nameLabel.text = value.name
     }

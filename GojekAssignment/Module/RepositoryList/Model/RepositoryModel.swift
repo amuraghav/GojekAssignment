@@ -10,9 +10,15 @@ struct Repository: Codable {
     let author, name: String?
     let avatar: String?
     let url: String?
-    let description, language, languageColor: String?
+    let welcomeDescription, language, languageColor: String?
     let stars, forks, currentPeriodStars: Int?
     let builtBy: [BuiltBy]?
+    
+    enum CodingKeys: String, CodingKey {
+           case author, name, avatar, url
+           case welcomeDescription = "description"
+           case language, languageColor, stars, forks, currentPeriodStars, builtBy
+       }
 }
 
 // MARK: - BuiltBy

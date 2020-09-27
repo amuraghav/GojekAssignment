@@ -31,6 +31,8 @@ struct APIRequest{
 
 
 class ServiceManager: NSObject{
+    private override init() {}
+    static let shared = ServiceManager()
     
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?

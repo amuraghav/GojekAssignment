@@ -19,11 +19,17 @@ class RepositoryVC: UIViewController {
         tableView.registerCells(RepoTableViewCell.self)
         tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshGitRepositry(_:)), for: .valueChanged)
+        viewModel.fetchData()
         addListener()
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.getRepository()
+        
+        if(viewModel.repositoryList.value == nil || viewModel.repositoryList.value?.count == 0){
+            
+            viewModel.getRepository()
+        }
+        
     }
     
     @objc private func refreshGitRepositry(_ sender: Any) {
@@ -34,10 +40,17 @@ class RepositoryVC: UIViewController {
     func addListener() {
         
         viewModel.showHUD.bind { [unowned self](show) in
+            
             self.showHUD(show)
         }
         viewModel.showAlert.bind { [unowned self](message) in
+   
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+                self.view.layoutIfNeeded()
+                
             self.showAlertMesssage(message: message, onCompletion: nil)
+            }
         }
         viewModel.neworkError.bind {[unowned self](isNetworkError) in
             DispatchQueue.main.async {
@@ -51,7 +64,7 @@ class RepositoryVC: UIViewController {
                 self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
             }
-         
+
         }
         
     }
@@ -74,6 +87,12 @@ extension RepositoryVC : UITableViewDelegate,UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell") as? RepoTableViewCell else{ return UITableViewCell()}
         cell.data = viewModel.repositoryList.value?[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repoObj = viewModel.repositoryList.value?[indexPath.row]
+        let detailVC = RepositoryDetailsVC.instance(repo: repoObj)
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
     

@@ -7,64 +7,76 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AFC6B929-3081-458A-9E98-8D1577E70634"
+            uuid = "54FF448D-695B-4569-BE97-591E3B32CEBD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GojekAssignment/Module/RepositoryList/ViewModel/RepositoryViewModel.swift"
+            filePath = "GojekAssignment/Module/RepositoryList/Controller/RepositoryVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "getRepository()"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "addListener()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AFC6B929-3081-458A-9E98-8D1577E70634 - 9ae60b31e9e8b54d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;GojekAssignment.Repository&gt;, GojekAssignment.NetworkError&gt;) -&gt; () in GojekAssignment.RepositoryViewModel.getRepository() -&gt; ()"
-                  moduleName = "GojekAssignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pankajraghav/Desktop/GojekAssignment/GojekAssignment/Module/RepositoryList/ViewModel/RepositoryViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "AFC6B929-3081-458A-9E98-8D1577E70634 - 9ae60b31e9e8b54d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;GojekAssignment.Repository&gt;, GojekAssignment.NetworkError&gt;) -&gt; () in GojekAssignment.RepositoryViewModel.getRepository() -&gt; ()"
-                  moduleName = "GojekAssignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pankajraghav/Desktop/GojekAssignment/GojekAssignment/Module/RepositoryList/ViewModel/RepositoryViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "104">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "A73539CD-171D-4F1E-995C-00BE45D86E55"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FAD541D1-28B2-4809-99EC-E641F6450FF1"
+            uuid = "01B19587-3934-432D-A2AF-69E89AA94967"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GojekAssignment/Module/RepositoryList/Controller/RepositoryVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "addListener()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F54FE023-EC66-4171-8927-1A79D7151BDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GojekAssignment/Module/RepositoryList/Controller/RepositoryVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "addListener()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FD32D9C-882A-4055-8EF8-3B1F6EF2158C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GojekAssignment/Module/RepositoryList/ViewModel/RepositoryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "getRepository()"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
