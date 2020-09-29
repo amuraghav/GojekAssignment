@@ -57,7 +57,9 @@ class RepositoryVC: UIViewController {
    
             DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
-            self.showAlertMesssage(message: message, onCompletion: nil)
+                self.showAlertMesssage(message: message) {
+                    viewModel.getRepository()
+                }
             }
         }
         viewModel.neworkError.bind {[unowned self](isNetworkError) in

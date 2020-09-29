@@ -51,7 +51,7 @@ extension UIViewController{
     func showAlertMesssage(message:String?, onCompletion: alertClosure){
            let title = "Oops"
            let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-           let okButton = UIAlertAction.init(title: "OK", style: .default) { (action) in
+           let okButton = UIAlertAction.init(title: "Retry", style: .default) { (action) in
                onCompletion?()
            }
            alert.addAction(okButton)
