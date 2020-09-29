@@ -11,7 +11,6 @@ class RepositoryViewModel : BaseViewModel{
     var repositoryList: Bindable<[Repository]?> = Bindable(nil)
     var neworkError: Bindable<Bool> = Bindable(false)
     private let _coreDataManager = CoreDataManager()
-    
  // MARK:- GET REPOSITORY FROM API
     
     func getRepository(){
@@ -65,3 +64,6 @@ class RepositoryViewModel : BaseViewModel{
     }
     
 }
+
+
+

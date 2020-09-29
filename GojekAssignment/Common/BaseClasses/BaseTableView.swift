@@ -17,4 +17,9 @@ class BaseTableView: UITableView {
             register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier)
         }
     }
+    
+    func dequeueCell<T: UITableViewCell>(_ tableCell: T.Type) -> T {
+        let cell = dequeueReusableCell(withIdentifier: String(describing: tableCell.self)) as! T
+        return cell
+    }
 }

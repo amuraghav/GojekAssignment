@@ -125,7 +125,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Readme.md" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7d-eD-kta">
-                        <rect key="frame" x="22" y="244" width="87" height="19.5"/>
+                        <rect key="frame" x="22" y="244" width="282" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -142,6 +142,7 @@
                     <constraint firstItem="x3u-D0-C1h" firstAttribute="top" secondItem="KnK-aw-vIU" secondAttribute="bottom" constant="45" id="HUa-LI-6BR"/>
                     <constraint firstAttribute="bottom" secondItem="S7d-eD-kta" secondAttribute="bottom" priority="250" constant="16.5" id="J99-eU-ajT"/>
                     <constraint firstItem="8dE-5A-RPn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="K4B-XD-Dd9"/>
+                    <constraint firstAttribute="trailing" secondItem="S7d-eD-kta" secondAttribute="trailing" constant="16" id="M8z-bQ-3rB"/>
                     <constraint firstAttribute="trailing" secondItem="KnK-aw-vIU" secondAttribute="trailing" constant="16" id="Z12-y5-lsZ"/>
                     <constraint firstItem="uny-r8-z5w" firstAttribute="top" secondItem="xHv-dx-Gbu" secondAttribute="bottom" constant="15" id="arM-bG-an5"/>
                     <constraint firstItem="S7d-eD-kta" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="mq3-xS-1hD"/>
@@ -158,7 +159,7 @@
                 <outlet property="starLabel" destination="vIX-2d-Ma9" id="c4G-7E-5cu"/>
                 <outlet property="userImageView" destination="8dE-5A-RPn" id="HCN-8q-i3Z"/>
             </connections>
-            <point key="canvasLocation" x="83" y="120"/>
+            <point key="canvasLocation" x="82.608695652173921" y="119.86607142857142"/>
         </tableViewCell>
     </objects>
     <resources>

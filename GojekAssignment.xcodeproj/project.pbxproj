@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		045C7C3A25206BC9001D6448 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C7C3925206BC9001D6448 /* PersistenceService.swift */; };
 		045C7C5125208576001D6448 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C7C5025208576001D6448 /* CoreDataManager.swift */; };
-		045C7C5A25208866001D6448 /* RepositoryManagedObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C7C5825208866001D6448 /* RepositoryManagedObject+CoreDataClass.swift */; };
-		045C7C5B25208866001D6448 /* RepositoryManagedObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C7C5925208866001D6448 /* RepositoryManagedObject+CoreDataProperties.swift */; };
 		045C7C6C2520DB11001D6448 /* RepositoryDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C7C6A2520DB10001D6448 /* RepositoryDetailsVC.swift */; };
 		045C7C6D2520DB11001D6448 /* RepositoryDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045C7C6B2520DB10001D6448 /* RepositoryDetailsVC.xib */; };
 		045C7C7E2520DE69001D6448 /* RepoInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C7C7C2520DE69001D6448 /* RepoInfoTableViewCell.swift */; };
 		045C7C7F2520DE69001D6448 /* RepoInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045C7C7D2520DE69001D6448 /* RepoInfoTableViewCell.xib */; };
 		045C7C90252108AE001D6448 /* WebPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C7C8E252108AE001D6448 /* WebPageTableViewCell.swift */; };
 		045C7C91252108AE001D6448 /* WebPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045C7C8F252108AE001D6448 /* WebPageTableViewCell.xib */; };
+		049AE2672522F1E30012B13B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AE2662522F1E30012B13B /* Constants.swift */; };
+		049AE26D2522FC810012B13B /* RepositoryManagedObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AE26B2522FC810012B13B /* RepositoryManagedObject+CoreDataClass.swift */; };
+		049AE26E2522FC810012B13B /* RepositoryManagedObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049AE26C2522FC810012B13B /* RepositoryManagedObject+CoreDataProperties.swift */; };
 		04EFE790251F332300926AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE78F251F332300926AAD /* AppDelegate.swift */; };
 		04EFE794251F332400926AAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFE793251F332300926AAD /* ViewController.swift */; };
 		04EFE797251F332400926AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EFE795251F332400926AAD /* Main.storyboard */; };
@@ -63,14 +64,15 @@
 /* Begin PBXFileReference section */
 		045C7C3925206BC9001D6448 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		045C7C5025208576001D6448 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		045C7C5825208866001D6448 /* RepositoryManagedObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryManagedObject+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		045C7C5925208866001D6448 /* RepositoryManagedObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryManagedObject+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		045C7C6A2520DB10001D6448 /* RepositoryDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsVC.swift; sourceTree = "<group>"; };
 		045C7C6B2520DB10001D6448 /* RepositoryDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailsVC.xib; sourceTree = "<group>"; };
 		045C7C7C2520DE69001D6448 /* RepoInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoInfoTableViewCell.swift; sourceTree = "<group>"; };
 		045C7C7D2520DE69001D6448 /* RepoInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoInfoTableViewCell.xib; sourceTree = "<group>"; };
 		045C7C8E252108AE001D6448 /* WebPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageTableViewCell.swift; sourceTree = "<group>"; };
 		045C7C8F252108AE001D6448 /* WebPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebPageTableViewCell.xib; sourceTree = "<group>"; };
+		049AE2662522F1E30012B13B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		049AE26B2522FC810012B13B /* RepositoryManagedObject+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RepositoryManagedObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		049AE26C2522FC810012B13B /* RepositoryManagedObject+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RepositoryManagedObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		04EFE78C251F332300926AAD /* GojekAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GojekAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EFE78F251F332300926AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EFE793251F332300926AAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,8 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				045C7C692520DAC5001D6448 /* Controller */,
-				045C7C682520DAB3001D6448 /* ViewModel */,
-				045C7C672520DAA4001D6448 /* Model */,
 				045C7C662520DA8A001D6448 /* View */,
 			);
 			path = RepositoryDetails;
@@ -154,20 +154,6 @@
 				045C7C6B2520DB10001D6448 /* RepositoryDetailsVC.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		045C7C672520DAA4001D6448 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		045C7C682520DAB3001D6448 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		045C7C692520DAC5001D6448 /* Controller */ = {
@@ -268,6 +254,7 @@
 				04EFE7CD251F359000926AAD /* Bindable.swift */,
 				04EFE7F7251F401000926AAD /* Extension.swift */,
 				045C7C3925206BC9001D6448 /* PersistenceService.swift */,
+				049AE2662522F1E30012B13B /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -305,8 +292,8 @@
 		04EFE7D4251F362A00926AAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				045C7C5825208866001D6448 /* RepositoryManagedObject+CoreDataClass.swift */,
-				045C7C5925208866001D6448 /* RepositoryManagedObject+CoreDataProperties.swift */,
+				049AE26B2522FC810012B13B /* RepositoryManagedObject+CoreDataClass.swift */,
+				049AE26C2522FC810012B13B /* RepositoryManagedObject+CoreDataProperties.swift */,
 				04EFE806251F4BDF00926AAD /* RepositoryModel.swift */,
 			);
 			path = Model;
@@ -524,7 +511,7 @@
 				04EFE79A251F332400926AAD /* GojekAssignment.xcdatamodeld in Sources */,
 				04EFE7F8251F401000926AAD /* Extension.swift in Sources */,
 				04EFE828251F681200926AAD /* RootController.swift in Sources */,
-				045C7C5B25208866001D6448 /* RepositoryManagedObject+CoreDataProperties.swift in Sources */,
+				049AE26D2522FC810012B13B /* RepositoryManagedObject+CoreDataClass.swift in Sources */,
 				04EFE7CE251F359000926AAD /* Bindable.swift in Sources */,
 				04EFE790251F332300926AAD /* AppDelegate.swift in Sources */,
 				045C7C90252108AE001D6448 /* WebPageTableViewCell.swift in Sources */,
@@ -536,11 +523,12 @@
 				04EFE831251F933F00926AAD /* NoInternetVC.swift in Sources */,
 				045C7C3A25206BC9001D6448 /* PersistenceService.swift in Sources */,
 				04EFE7FD251F472800926AAD /* SceneDelegate.swift in Sources */,
-				045C7C5A25208866001D6448 /* RepositoryManagedObject+CoreDataClass.swift in Sources */,
+				049AE26E2522FC810012B13B /* RepositoryManagedObject+CoreDataProperties.swift in Sources */,
 				045C7C6C2520DB11001D6448 /* RepositoryDetailsVC.swift in Sources */,
 				04EFE81A251F60AF00926AAD /* BaseTableViewCell.swift in Sources */,
 				045C7C5125208576001D6448 /* CoreDataManager.swift in Sources */,
 				04EFE814251F53B800926AAD /* RepoTableViewCell.swift in Sources */,
+				049AE2672522F1E30012B13B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

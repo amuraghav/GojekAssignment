@@ -6,39 +6,50 @@
 //
 
 import UIKit
+import WebKit
 
 class RepositoryDetailsVC: UIViewController {
     @IBOutlet var tableView: BaseTableView!
+    private var repository : Repository!
     
-    private var repository : Repository?
+    lazy var webPageTableViewCell: WebPageTableViewCell = {
+        self.tableView.dequeueCell(WebPageTableViewCell.self)
+    }()
+    
+    lazy var repoInfoTableViewcell: RepoInfoTableViewCell = {
+        self.tableView.dequeueCell(RepoInfoTableViewCell.self)
+    }()
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = repository?.name
-        tableView.registerCells(RepoInfoTableViewCell.self)
-        // Do any additional setup after loading the view.
+        initialize()
+                
     }
-
+    
+     func initialize() {
+        
+        self.title = repository.name
+        tableView.registerCells(RepoInfoTableViewCell.self,WebPageTableViewCell.self)
+        repoInfoTableViewcell.data = repository
+        if let url = URL(string: repository?.url ?? ""){
+        webPageTableViewCell.webView.load(URLRequest(url:url ))
+        }
+    }
 
 }
 
 extension RepositoryDetailsVC : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepoInfoTableViewCell") as! RepoInfoTableViewCell
-        cell.data = repository
-        return cell
-        
+      
+        [repoInfoTableViewcell,webPageTableViewCell][indexPath.item]
     }
-    
-    
-    
-    
 }
 extension RepositoryDetailsVC{
-    static func instance(repo : Repository?) -> RepositoryDetailsVC{
+    static func instance(repo : Repository) -> RepositoryDetailsVC{
         let controller: RepositoryDetailsVC = UIViewController.load()
         controller.repository = repo
         return controller
