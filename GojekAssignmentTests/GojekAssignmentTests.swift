@@ -9,9 +9,35 @@ import XCTest
 @testable import GojekAssignment
 
 class GojekAssignmentTests: XCTestCase {
-
+   
+  
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    func testGetRepository() {
+        let urlString = baseUrl + "repositories"
+        let exception =  self.expectation(description: "")
+        ServiceManager.shared.performRequest(request: APIRequest(url: urlString)) {(result : Result< [Repository] , NetworkError>) in
+          
+            switch result {
+            case .success(let response):
+                XCTAssertNotNil(response)
+                exception.fulfill()
+            case .failure(let error) :
+            XCTFail(error.localizedDescription)
+            }
+        }
+        self.waitForExpectations(timeout: 10.0, handler: nil)
+    }
+    
+    func testGetDataFromDatabase(){
+        let viewModel =  RepositoryViewModel()
+        viewModel.repositoryList.bind { (list) in
+            XCTAssertNotNil(list)
+        }
+        viewModel.fetchData()
+        
     }
 
     override func tearDownWithError() throws {

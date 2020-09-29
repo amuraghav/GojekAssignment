@@ -22,13 +22,26 @@ class GojekAssignmentUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testAssignment() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCUIDevice.shared.orientation = .portrait
+        let tablesQuery = app.tables
+        tablesQuery.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        sleep(3)
+        
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        if tablesQuery.element(boundBy: 0).cells.element(boundBy: 5).exists{
+            tablesQuery.element(boundBy: 0).cells.element(boundBy: 5).tap()
+            sleep(3)
+            app.navigationBars.buttons.element(boundBy: 0).tap()
+        }
+        tablesQuery.firstMatch.swipeDown()
+        XCUIDevice.shared.orientation = .faceUp
+        XCUIDevice.shared.orientation = .portrait
+        XCUIDevice.shared.orientation = .faceUp
+        
     }
 
     func testLaunchPerformance() throws {
@@ -37,6 +50,6 @@ class GojekAssignmentUITests: XCTestCase {
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
-        }
+                    }
     }
 }
