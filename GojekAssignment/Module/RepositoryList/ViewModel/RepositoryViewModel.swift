@@ -20,7 +20,7 @@ class RepositoryViewModel : BaseViewModel{
           
             switch result {
             case .success(let response):
-                self?.deleteChache()
+                
                 self?.saveAndFetch(list: response)
 //               print(response)
             case .failure(let error) :
@@ -33,20 +33,30 @@ class RepositoryViewModel : BaseViewModel{
     }
     
     func saveAndFetch(list : [Repository]){
-        let semaphore = DispatchSemaphore(value: 0)
-        let dispatchQueue = DispatchQueue.global()
-       
-        dispatchQueue.async{
-            semaphore.signal()
-            self.saveRepository(list)
-            semaphore.signal()
-            semaphore.wait()
-            self.fetchData()
-            semaphore.signal()
-            semaphore.wait()
+       let operationQueue = OperationQueue()
+        let deleteOperation = BlockOperation {[weak self] in
+            self?.deleteChache()
         }
-        semaphore.signal()
-         self.showHUD.value = false
+        let saveOperation = BlockOperation {[weak self] in
+            self?.saveRepository(list)
+        }
+        let fetchOperation = BlockOperation {[weak self] in
+            self?.fetchData()
+        }
+        saveOperation.addDependency(deleteOperation)
+        fetchOperation.addDependency(saveOperation)
+        
+        operationQueue.addOperation(deleteOperation)
+        operationQueue.addOperation(saveOperation)
+        operationQueue.addOperation(fetchOperation)
+        
+        fetchOperation.completionBlock = {
+            DispatchQueue.main.async { [weak self] in
+                self?.showHUD.value = false
+            }
+         
+        }
+        
     }
     
     func fetchData(){
@@ -58,8 +68,8 @@ class RepositoryViewModel : BaseViewModel{
     }
     
     func saveRepository(_ list : [Repository]){
-        list.forEach { (repoObj) in
-            self._coreDataManager.saveRepository(repo: repoObj)
+        list.forEach { [weak self] (repoObj) in
+            self?._coreDataManager.saveRepository(repo: repoObj)
         }
     }
     
