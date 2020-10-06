@@ -8,26 +8,24 @@
 import Foundation
 protocol GithubRepository {
     
-    func saveRepository(repo : Repository)
+    func saveRepository(repo : RepositoryItem)
     func getAllRepository() -> [Repository]?
     func deleteAllRepository()
     
 }
 
 struct CoreDataManager : GithubRepository {
-    func saveRepository(repo: Repository) {
-            let repositoryMO = RepositoryManagedObject(context: PersistenceService.shared.context)
-           repositoryMO.author = repo.author
-           repositoryMO.name = repo.name
-           repositoryMO.avatar = repo.avatar
-           repositoryMO.url = repo.url
-           repositoryMO.welcomeDescription = repo.welcomeDescription
-           repositoryMO.language = repo.language
-           repositoryMO.languageColor = repo.languageColor
-           repositoryMO.stars = repo.stars as NSNumber?
-           repositoryMO.forks = repo.forks as NSNumber?
-           repositoryMO.currentPeriodStars = repo.currentPeriodStars as NSNumber?
-           PersistenceService.shared.saveContext() 
+    func saveRepository(repo: RepositoryItem) {
+        let repositoryMO = RepositoryManagedObject(context: PersistenceService.shared.context)
+        repositoryMO.author = repo.owner?.login
+        repositoryMO.name = repo.name
+        repositoryMO.avatar = repo.owner?.avatarURL
+        repositoryMO.url = repo.htmlURL
+        repositoryMO.welcomeDescription = repo.itemDescription
+        repositoryMO.language = repo.language
+        repositoryMO.stars = repo.stargazersCount as NSNumber?
+        repositoryMO.forks = repo.forksCount as NSNumber?
+        PersistenceService.shared.saveContext()
     }
     
     func getAllRepository() -> [Repository]? {

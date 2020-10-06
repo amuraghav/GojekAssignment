@@ -9,7 +9,7 @@ import Foundation
 
 
 // MARK:- BASE URL
-let baseUrl = "https://ghapi.huchen.dev/"
+let baseUrl = "https://api.github.com/search/"
 
 // MARK:- NETWORK ERROR
 enum NetworkError:CLongLong,Error {

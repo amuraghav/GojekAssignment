@@ -14,14 +14,15 @@ class RepositoryViewModel : BaseViewModel{
  // MARK:- GET REPOSITORY FROM API
     
     func getRepository(){
-        let urlString = baseUrl + "repositories"
+        let urlString = baseUrl + "repositories?q=sort=stars&order=desc"
         self.showHUD.value = true
-        ServiceManager.shared.performRequest(request: APIRequest(url: urlString)) {[weak self] (result : Result< [Repository] , NetworkError>) in
+        ServiceManager.shared.performRequest(request: APIRequest(url: urlString)) {[weak self] (result : Result< RepositoryResponse , NetworkError>) in
           
             switch result {
             case .success(let response):
-                
-                self?.saveAndFetch(list: response)
+                if let repoList = response.items{
+                    self?.saveAndFetch(list: repoList)
+                }
 //               print(response)
             case .failure(let error) :
                 self?.showHUD.value = false
@@ -32,7 +33,7 @@ class RepositoryViewModel : BaseViewModel{
 
     }
     
-    func saveAndFetch(list : [Repository]){
+    func saveAndFetch(list : [RepositoryItem]){
        let operationQueue = OperationQueue()
         let deleteOperation = BlockOperation {[weak self] in
             self?.deleteChache()
@@ -67,7 +68,7 @@ class RepositoryViewModel : BaseViewModel{
         self._coreDataManager.deleteAllRepository()
     }
     
-    func saveRepository(_ list : [Repository]){
+    func saveRepository(_ list : [RepositoryItem]){
         list.forEach { [weak self] (repoObj) in
             self?._coreDataManager.saveRepository(repo: repoObj)
         }
