@@ -16,9 +16,9 @@ class GojekAssignmentTests: XCTestCase {
     }
     
     func testGetRepository() {
-        let urlString = baseUrl + "repositories"
+        let urlString = Constants.Base_Url + Constants.Api_EndPoint
         let exception =  self.expectation(description: "")
-        ServiceManager.shared.performRequest(request: APIRequest(url: urlString)) {(result : Result< [Repository] , NetworkError>) in
+        ServiceManager.shared.performRequest(request: APIRequest(url: urlString)) {(result : Result< RepositoryResponse , NetworkError>) in
           
             switch result {
             case .success(let response):

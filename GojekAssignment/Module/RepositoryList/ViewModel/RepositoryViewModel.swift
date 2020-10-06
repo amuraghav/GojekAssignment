@@ -14,7 +14,7 @@ class RepositoryViewModel : BaseViewModel{
  // MARK:- GET REPOSITORY FROM API
     
     func getRepository(){
-        let urlString = baseUrl + "repositories?q=sort=stars&order=desc"
+        let urlString = Constants.Base_Url + Constants.Api_EndPoint
         self.showHUD.value = true
         ServiceManager.shared.performRequest(request: APIRequest(url: urlString)) {[weak self] (result : Result< RepositoryResponse , NetworkError>) in
           
